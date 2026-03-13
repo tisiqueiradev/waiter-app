@@ -4,9 +4,9 @@ import { Container } from "./style";
 
 const orders: Order[] = [
   {
-    "_id": "69b077b58c04432d9dc59bdf",
+    "_id": "69b318e1408964a2d038b046",
     "table": "123",
-    "status": "IN_PRODUCTION",
+    "status": "WAITING",
     "products": [
       {
         "product": {
@@ -16,7 +16,7 @@ const orders: Order[] = [
 
         },
         "quantity": 2,
-        "_id": "69b077b58c04432d9dc59be0"
+        "_id": "69b06f042a00b5c2205a911c"
       },
       {
         "product": {
@@ -26,7 +26,7 @@ const orders: Order[] = [
           "price": 7,
         },
         "quantity": 1,
-        "_id": "69b077b58c04432d9dc59be1"
+        "_id": "69b073da1a83d306a7f20397"
       }
     ],
 
@@ -40,17 +40,17 @@ export function Orders() {
       <OrdersBoards
         icon="⏱️"
         title="Fila de espera"
-        order={[]}
+        orders={orders}
       />
       <OrdersBoards
         icon="🧑🏼‍🍳"
         title="Em preparação"
-        order={orders}
+        orders={[]}
       />
       <OrdersBoards
         icon="✅"
         title="Pronto"
-        order={[]}
+        orders={[]}
 
       />
     </Container>
